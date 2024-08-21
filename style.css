@@ -1,0 +1,139 @@
+/* 全局樣式 */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Noto Sans TC", sans-serif; /* 使用 Noto Sans TC 思源黑體 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides-container {
+  position: relative;
+  width: 800px;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /* 移除 margin:auto; 因為 flex 居中 */
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transition: left 0.5s ease-in-out;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 4px solid;
+  border-image: linear-gradient(to right, #ae921a, #f3e162) 1;
+}
+
+.slide.active {
+  left: 0;
+}
+
+.slide h1 {
+  color: #e1a383;
+  font-size: 50px;
+}
+
+.slide h2 {
+  color: #e1a383;
+  font-size: 35px;
+  margin: 10px 0px;
+}
+
+.slide p.subtitle {
+  color: #e1a383;
+  font-size: 20px;
+}
+
+.slide p {
+  color: #858585;
+  font-size: 17px;
+  margin: 10px 0px;
+}
+
+.about-me.cover {
+  width: 300px;
+  color: #e1a383;
+  text-align: right;
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+}
+
+.spacer {
+  height: 100px;
+  background-color: transparent;
+  margin: 20px 0;
+}
+
+.highlight-block {
+  background-color: #e1a383; /* 背景顏色 */
+  border-radius: 15px; /* 圓角半徑 */
+  padding: 10px; /* 內邊距，確保文本不會緊貼邊緣 */
+  margin: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-block p {
+  color: #ffffff;
+}
+
+.introduce-item {
+  display: flex;
+  align-items: center; /* 垂直居中對齊 */
+}
+
+.icon {
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start; /* 將內容對齊頂部 */
+}
+
+.experience-item p {
+  margin: 0; /* 移除 p 元素的默認外邊距 */
+}
+
+.date-text {
+  font-size: 15px;
+  color: #b4b2b2;
+}
+
+ul {
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+
+li.list {
+  color: #858585;
+  padding: 1px;
+  font-size: 17px;
+}
+
+.about-me.last {
+  color: #e1a383;
+  text-align: left;
+}
